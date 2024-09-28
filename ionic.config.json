@@ -1,0 +1,7 @@
+{
+  "name": "taller_fire",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
