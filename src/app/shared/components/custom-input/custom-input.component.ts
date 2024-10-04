@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { ButtonComponent } from '../button/button.component';
 
 @Component({
   selector: 'app-custom-input',
