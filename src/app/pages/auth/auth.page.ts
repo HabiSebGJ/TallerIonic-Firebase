@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ButtonComponent } from 'src/app/shared/components/button/button.component';
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.page.html',
   styleUrls: ['./auth.page.scss'],
+
 })
 export class AuthPage implements OnInit {
 
@@ -20,7 +22,11 @@ export class AuthPage implements OnInit {
   }
 
   submit(){
-    console.log(this.form.value);
+    if (this.form.valid) {
+      console.log(this.form.value); // Lógica para manejar el formulario válido
+    } else {
+      console.log('Formulario inválido'); // Lógica para manejar formulario inválido
+    }
   }
 
 }
