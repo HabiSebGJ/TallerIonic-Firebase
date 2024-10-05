@@ -22,11 +22,10 @@ export class AuthPage implements OnInit {
   }
 
   submit(){
-    if (this.form.valid) {
-      console.log(this.form.value); // Lógica para manejar el formulario válido
+    if (this.form.value) {
+      console.log(this.form.value); // Imprime en consola si todo esta bien
     } else {
-      console.log('Formulario inválido'); // Lógica para manejar formulario inválido
+      console.log('Formulario inválido'); // Imprime si todo esta mal
     }
   }
-
 }

@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
+type buttonType = "button" | "submit";
+
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
@@ -9,6 +11,7 @@ import { FormGroup } from '@angular/forms';
 export class ButtonComponent  implements OnInit {
   @Input() form: FormGroup;
   @Input() disabled: boolean = false;
+  @Input() type: buttonType = "submit";
 
   constructor() { }
 

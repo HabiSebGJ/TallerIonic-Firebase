@@ -9,29 +9,21 @@ import { CoreModule } from '../core/core/core.module';
 import { ButtonComponent } from './components/button/button.component';
 
 
+const COMPONENTS = [CustomInputComponent, HeaderComponent, LogoComponent,
+  ButtonComponent]
+
+const MODULES =[CommonModule,
+  IonicModule,
+  ReactiveFormsModule,
+  FormsModule,
+  CoreModule]  
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    CustomInputComponent,
-    LogoComponent,
-    ButtonComponent
-
+  declarations: [...COMPONENTS],
+   
+  exports: [ ...COMPONENTS,
+    ReactiveFormsModule, ...MODULES
   ],
-  exports: [
-    HeaderComponent,
-    CustomInputComponent,
-    LogoComponent,
-    ReactiveFormsModule,
-    ButtonComponent
-
-  ],
-  imports: [
-    CommonModule,
-    IonicModule,
-    ReactiveFormsModule,
-    FormsModule,
-    CoreModule,
-  ]
+  imports: [...MODULES]
 })
 export class SharedModule { }
