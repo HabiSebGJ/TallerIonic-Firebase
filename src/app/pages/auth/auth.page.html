@@ -47,7 +47,12 @@
       <p routerLink="forgot-password" class="ion-text-end">
         Forgot your password?
       </p>
-      <app-button  routerLink="sign-up" [disabled]="form.invalid">Login</app-button>
+      <app-button [disabled]="form.invalid"></app-button>
+
+      <ion-button routerLink="sign-up" class="ion-margin-top" expand="block"mode="ios" fill="outline"> 
+        Register
+        <ion-icon slot="end" name="person-add-outline"></ion-icon>
+      </ion-button>
     </form>
   </div>
 </ion-content>
